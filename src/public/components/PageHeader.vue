@@ -22,7 +22,7 @@ export default {
         // eslint-disable-next-line no-unused-vars
         openMenu(_ev){
             location.href = '/menu.html'
-        }
+        },
     },
 };
 </script>

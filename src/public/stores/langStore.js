@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 
 function getCurttenLang(){
-    lang = localStorage.getItem("language")
+    const lang = localStorage.getItem("language")
     if (lang == null){
         localStorage.setItem("language", "zhCN");
         return "zhCN";
@@ -19,7 +19,7 @@ export const useLangStore = defineStore("counter", {
         },
         update(new_lang) {
             try {
-                allow_list = ["zhCN", "enUS"];
+                const allow_list = ["zhCN", "enUS"];
                 if (new_lang in allow_list) {
                     this.lang = new_lang;
                     localStorage.setItem("language", new_lang);
