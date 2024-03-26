@@ -19,6 +19,10 @@ export default {
         openDonatePage(_ev) {
             window.open("https://afdian.net/a/lingyunawa");
         },
+        // eslint-disable-next-line no-unused-vars
+        openMenu(_ev){
+            location.href = '/menu.html'
+        }
     },
 };
 </script>
@@ -44,8 +48,8 @@ export default {
             <template #subtitle>
                 <a-space>
                     <span>v0.1.0</span>
-                    <a-tag color="red" size="small"> In-Dev </a-tag>
-                    <a-tag color="red" size="small"> Not a release </a-tag>
+                    <a-tag color="red" size="small"> {{  $t('In-Dev') }} </a-tag>
+                    <a-tag color="red" size="small"> {{  $t('Not a release') }} </a-tag>
                 </a-space>
             </template>
             <template #extra>
@@ -65,7 +69,7 @@ export default {
                             <ly-icon-donate />
                         </template>
                     </a-button>
-                    <a-button type="primary">
+                    <a-button type="primary" @click="openMenu">
                         <template #icon>
                             <ly-icon-page />
                         </template>
