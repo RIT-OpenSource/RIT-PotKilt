@@ -11,9 +11,7 @@ export default {
 
 <template>
     <div class="Homepage">
-        <div id="left" class="aside">
-            
-        </div>
+        
     </div>
 </template>
 

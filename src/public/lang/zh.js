@@ -5,4 +5,5 @@ export default{
     "Not a release" : "未发布",
     "Release": "正式版",
     "Pre-Release": "预发布版",
+    "All right reserved" : "保留所有权利",
 }

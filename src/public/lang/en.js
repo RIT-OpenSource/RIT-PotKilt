@@ -5,4 +5,5 @@ export default{
     "Not a release" : "Not a release",
     "Release": "Release",
     "Pre-Release": "Pre-Release",
+    "All right reserved" : "All right reserved",
 }
