@@ -1,11 +1,13 @@
 <script>
 import PageHeader from "@/public/components/PageHeader.vue";
+import Setting from "@/setting/components/Settings.vue";
 import PageBottom from "@/public/components/PageBottom.vue";
 
 export default {
     name: "App",
     components: {
         PageHeader,
+        Setting,
         PageBottom,
     },
     setup() {
@@ -19,6 +21,7 @@ export default {
     <div id="app">
         <PageHeader :breadcrumbRoute="bread" />
         <PageBottom id="bottom" />
+        <Setting />
     </div>
 </template>
 
