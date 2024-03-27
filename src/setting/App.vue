@@ -1,8 +1,3 @@
-<template>
-    <PageHeader :breadcrumbRoute="bread" />
-    <PageBottom id="bottom" />
-</template>
-
 <script>
 import PageHeader from "@/public/components/PageHeader.vue";
 import PageBottom from "@/public/components/PageBottom.vue";
@@ -19,6 +14,13 @@ export default {
     },
 };
 </script>
+
+<template>
+    <div id="app">
+        <PageHeader :breadcrumbRoute="bread" />
+        <PageBottom id="bottom" />
+    </div>
+</template>
 
 <style>
 #app {

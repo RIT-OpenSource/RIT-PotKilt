@@ -1,16 +1,19 @@
 <template>
     <PageHeader :breadcrumbRoute="bread" />
+    <MenuPage />
     <PageBottom id="bottom" />
 </template>
 
 <script>
 import PageHeader from "@/public/components/PageHeader.vue";
+import MenuPage from "./components/menu.vue";
 import PageBottom from "@/public/components/PageBottom.vue";
 
 export default {
     name: "App",
     components: {
         PageHeader,
+        MenuPage,
         PageBottom,
     },
     setup(){
