@@ -1,11 +1,11 @@
 <script>
-// import themesettingcard from './themesettingcard.vue'
+import themesettingcard from './themesettingcard.vue'
 import langsettingcard from './langsettingcard.vue'
 
 export default {
     name: 'SettingsPage',
     components: {
-        // themesettingcard,
+        themesettingcard,
         langsettingcard
     }
 }
