@@ -5,7 +5,10 @@ import { createI18n } from 'vue-i18n';
 
 // Control Lib
 import ArcoVue from "@arco-design/web-vue";
-import ArcoVueIcon from "@arco-design/web-vue/es/icon";
+import ArcoVueIcon from "@arco-design/web-vue/es/icon/arco-vue-icon";
+
+// Module
+// None
 
 // Styles
 import "@arco-design/web-vue/dist/arco.css";
