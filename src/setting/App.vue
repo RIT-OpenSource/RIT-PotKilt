@@ -10,9 +10,9 @@ export default {
         Setting,
         PageBottom,
     },
-    setup() {
-        var bread = [{ name: "Setting", url: "/" }];
-        return { bread };
+    setup(){
+        var bread = [{ name: "Home", url: "/" }, {name: "Menu", url: "/menu"}, { name: "Setting", url: "/Setting" }];
+        return {bread}
     },
 };
 </script>

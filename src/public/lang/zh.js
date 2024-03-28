@@ -10,4 +10,8 @@ export default {
     "Open Counter Page" : "打开计数器页面",
     "Open" : "打开",
     "Counter" : "计数器",
+    "Personalization" : "个性化",
+    "language" : "语言",
+    "Chinese" : "中文",
+    "English" : "英文", 
 }

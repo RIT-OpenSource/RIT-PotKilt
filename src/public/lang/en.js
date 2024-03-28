@@ -10,4 +10,8 @@ export default {
     "Open Counter Page" : "Open Counter Page",
     "Open" : "Open",
     "Counter" : "Counter",
+    "Personalization" : "Personalization",
+    "language" : "language",
+    "Chinese" : "中文",
+    "English" : "English",
 }
