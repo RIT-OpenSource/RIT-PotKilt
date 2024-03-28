@@ -1,6 +1,6 @@
 <script>
-import themesettingcard from './themesettingcard.vue'
-import langsettingcard from './langsettingcard.vue'
+import themesettingcard from './themesettingcard.vue';
+import langsettingcard from './langsettingcard.vue';
 
 export default {
     name: 'SettingsPage',
@@ -8,7 +8,7 @@ export default {
         themesettingcard,
         langsettingcard
     }
-}
+};
 </script>
 
 <template>

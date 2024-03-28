@@ -1,5 +1,5 @@
 <script>
-import { useThemeStore } from '@/public/stores/themeStore'
+import { useThemeStore } from '@/public/stores/themeStore';
 
 export default {
     name: 'ThemeSettingCard',
@@ -11,12 +11,12 @@ export default {
     },
     methods: {
         toggleCardMain() {
-            this.showCardMain = !this.showCardMain
+            this.showCardMain = !this.showCardMain;
         },
         themeSettingChanged(value) {
             if (value == 'light' || value == 'dark' || value == 'auto') {
-                var ThemeStore = useThemeStore()
-                ThemeStore.setTheme(value)
+                var ThemeStore = useThemeStore();
+                ThemeStore.setTheme(value);
             }
         }
     }

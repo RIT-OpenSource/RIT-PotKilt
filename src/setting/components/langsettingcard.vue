@@ -1,5 +1,5 @@
 <script>
-import { useLangStore } from '@/public/stores/langStore'
+import { useLangStore } from '@/public/stores/langStore';
 
 export default {
     name: 'LangSettingCard',
@@ -7,7 +7,7 @@ export default {
         return {
             showCardMain: false,
             selectedOption: localStorage.getItem('language')
-        }
+        };
     },
     methods: {
         toggleCardMain() {
@@ -15,8 +15,8 @@ export default {
         },
         langSettingChanged(value) {
             if (value == 'en' || value == 'zh') {
-                var LangStore = useLangStore()
-                LangStore.setLang(value)
+                var LangStore = useLangStore();
+                LangStore.setLang(value);
             }
         }
     }
