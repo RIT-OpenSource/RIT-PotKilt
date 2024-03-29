@@ -1,6 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-
+import { Pinia } from "pinia";
 import { createI18n } from 'vue-i18n';
 
 // Control Lib
@@ -25,6 +25,8 @@ const i18n = createI18n({
 })
 
 const app = createApp(App);
+
+app.use(Pinia);
 
 app.use(i18n);
 app.use(ArcoVue);
