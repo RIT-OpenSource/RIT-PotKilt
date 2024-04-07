@@ -1,6 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import { Pinia } from "pinia";
+import { createPinia } from "pinia";
 import { createI18n } from 'vue-i18n';
 
 // Control Lib
@@ -13,8 +13,8 @@ import ArcoVueIcon from "@arco-design/web-vue/es/icon/arco-vue-icon";
 // Styles
 import "@arco-design/web-vue/dist/arco.css";
 
-import en from '@/public/lang/en'
-import zh from '@/public/lang/zh'
+import en from '@/public/lang/enUS'
+import zh from '@/public/lang/zhCN'
 
 const i18n = createI18n({
     locale: localStorage.getItem('language') || 'en',
@@ -26,7 +26,8 @@ const i18n = createI18n({
 
 const app = createApp(App);
 
-app.use(Pinia);
+const pinia = createPinia()
+app.use(pinia);
 
 app.use(i18n);
 app.use(ArcoVue);

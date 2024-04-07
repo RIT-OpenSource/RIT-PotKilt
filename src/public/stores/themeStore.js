@@ -22,7 +22,11 @@ export const useThemeStore = defineStore('theme', {
                 darkModeQuery.addEventListener('change', handleDarkModeChange)
                 handleAutoTheme()
             } else {
-                document.querySelector(':root').classList = [theme]
+                if (theme == 'dark') {
+                    document.body.setAttribute("arco-theme", "dark")
+                } else {
+                    document.body.removeAttribute("arco-theme")
+                }
                 darkModeQuery.removeEventListener('change', handleDarkModeChange)
             }
         }
@@ -34,13 +38,17 @@ function handleAutoTheme() {
     const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)')
     if (theme == 'auto') {
         if (darkModeQuery.matches) {
-            document.querySelector(':root').classList = ['dark']
+            document.body.setAttribute("arco-theme", "dark")
         } else {
-            document.querySelector(':root').classList = ['light']
+            document.body.removeAttribute("arco-theme")
         }
         darkModeQuery.addEventListener('change', handleDarkModeChange)
     } else {
-        document.querySelector(':root').classList = [theme]
+        if (theme == 'dark') {
+            document.body.setAttribute("arco-theme", "dark")
+        } else {
+            document.body.removeAttribute("arco-theme")
+        }
         darkModeQuery.removeEventListener('change', handleDarkModeChange)
     }
 }

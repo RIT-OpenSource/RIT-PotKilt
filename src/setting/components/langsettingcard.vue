@@ -16,7 +16,7 @@ export default {
         langSettingChanged(value) {
             if (value == 'en' || value == 'zh') {
                 var LangStore = useLangStore();
-                LangStore.setLang(value);
+                LangStore.update(value);
             }
         }
     }

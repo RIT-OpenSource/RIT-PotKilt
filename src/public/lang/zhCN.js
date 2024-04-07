@@ -13,5 +13,5 @@ export default {
     "Personalization" : "个性化",
     "language" : "语言",
     "Chinese" : "中文",
-    "English" : "英文", 
+    "English" : "English", 
 }
