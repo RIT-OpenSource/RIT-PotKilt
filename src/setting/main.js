@@ -13,8 +13,8 @@ import ArcoVueIcon from "@arco-design/web-vue/es/icon/arco-vue-icon";
 // Styles
 import "@arco-design/web-vue/dist/arco.css";
 
-import en from '@/public/lang/enUS'
-import zh from '@/public/lang/zhCN'
+import en from '@/public/lang/en'
+import zh from '@/public/lang/zh'
 
 const i18n = createI18n({
     locale: localStorage.getItem('language') || 'en',
