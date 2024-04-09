@@ -1,53 +1,44 @@
 <script>
-import themesettingcard from './themesettingcard.vue';
-import langsettingcard from './langsettingcard.vue';
-
 export default {
-    name: 'SettingsPage',
-    components: {
-        themesettingcard,
-        langsettingcard
-    }
+    name: "SettingsPage",
 };
 </script>
 
 <template>
     <div class="settings">
-        <h1 id="title">{{ $t('Settings') }}</h1>
-        <div class="apart" id="Personalization">
-            <h2 class="partTitle">{{ $t('Personalization') }}</h2>
-            <themesettingcard></themesettingcard>
-        </div>
-        <div class="port" id="language">
-            <h2 class="partTitle">{{ $t('language') }}</h2>
-            <langsettingcard></langsettingcard>
-        </div>
+        <p class="settingsTitle">{{ $t("Personalization") }}</p>
+        <a-collapse :default-active-key="[1]" accordion>
+            <a-collapse-item :header="$t('Change the theme')" key="1">
+                <a-radio-group type="button">
+                    <a-radio value="Light">{{ $t("Light") }}</a-radio>
+                    <a-radio value="Dark">{{ $t("Dark") }}</a-radio>
+                    <a-radio value="Use the system settings">{{$t("Use the system settings")}}</a-radio>
+                </a-radio-group>
+            </a-collapse-item>
+        </a-collapse>
+        <p class="settingsTitle">{{ $t("Language") }}</p>
+        <a-collapse :default-active-key="[1]" accordion>
+            <a-collapse-item :header="$t('Change the language')" key="2">
+                <a-radio-group type="button">
+                    <a-radio value="EN">{{ $t("English") }}</a-radio>
+                    <a-radio value="ZH">{{ $t("中文") }}</a-radio>
+                </a-radio-group>
+            </a-collapse-item>
+        </a-collapse>
     </div>
 </template>
 
 <style scoped lang="less">
-h1#title {
-    margin-top: 20px;
-    margin-left: 40px;
-}
-div.apart {
+div.settings {
+    padding: 0 80px;
     display: block;
-    padding-left: 70px;
-    margin-top: 20px;
-    h2.partTitle {
-        opacity: 0.9;
+    p.settingsTitle {
+        font-size: 24px;
+        font-weight: bold;
+        width: max-content;
     }
-}
-h3#title {
-    margin-top: 20px;
-    margin-left: 40px;
-}
-div.port {
-    display: block;
-    padding-left: 70px;
-    margin-top: 20px;
-    h3.partTitle {
-        opacity: 0.9;
+    div.arco-collapse {
+        margin: 0 20px;
     }
 }
 </style>

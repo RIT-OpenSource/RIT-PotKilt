@@ -1,37 +1,26 @@
-import { defineStore } from "pinia";
+// store/i18nStore.js
 
-function getCurttenLang(){
-    const lang = localStorage.getItem("language")
-    if (lang == null){
-        localStorage.setItem("language", "zh");
-        return "zh";
+import { defineStore } from 'pinia';
+import { ref } from 'vue';
+import i18n from '../i18n'; // 假设您已经设置了VueI18n
+
+export const useI18nStore = defineStore('i18n', () => {
+  const locale = ref(i18n.locale); // 初始语言设置
+
+  // 更改语言的方法
+  function setLocale(newLocale) {
+    if (i18n.availableLocales.includes(newLocale)) {
+      locale.value = newLocale;
+      i18n.locale = newLocale; // 更新VueI18n的语言设置
+    } else {
+      console.error(`The locale ${newLocale} is not supported.`);
     }
-    return lang;
-}
+  }
 
-export const useLangStore = defineStore("counter", {
-    state: () => ({
-        lang: getCurttenLang(), 
-    }),
-    actions: {
-        get(){
-            return this.lang;
-        },
-        update(new_lang) {
-            try {
-                const allow_list = ["zh", "en"];
-                if (new_lang in allow_list) {
-                    this.lang = new_lang;
-                    localStorage.setItem("language", new_lang);
-                    return true;
-                } else {
-                    console.warn(`Language "${new_lang}" is not supported`);
-                    return false;
-                }
-            } catch (e) {
-                console.error(`Language update failed: ${e}`);
-                return false;
-            }
-        },
-    },
+  // 获取当前语言的方法
+  function getCurrentLocale() {
+    return locale.value;
+  }
+
+  return { locale, setLocale, getCurrentLocale };
 });

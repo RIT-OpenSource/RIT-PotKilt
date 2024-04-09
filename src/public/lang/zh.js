@@ -14,4 +14,9 @@ export default {
     "language" : "语言",
     "Chinese" : "中文",
     "English" : "English", 
+    "This feature is under development" : "此功能正在开发中",
+    "Use the system settings" : "使用系统设置",
+    "Light" : "亮",
+    "Dark" : "暗",
+    
 }

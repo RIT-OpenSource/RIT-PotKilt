@@ -14,4 +14,8 @@ export default {
     "language" : "language",
     "Chinese" : "中文",
     "English" : "English",
+    "This feature is under development" : "This feature is under development",
+    "Use the system settings" : "Use the system settings",
+    "Light" : "Light",
+    "Dark" : "Dark",
 }
