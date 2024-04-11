@@ -2,7 +2,7 @@
 
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
-import i18n from '../i18n'; // 假设您已经设置了VueI18n
+import i18n from '../i18n'; 
 
 export const useI18nStore = defineStore('i18n', () => {
   const locale = ref(i18n.locale); // 初始语言设置
