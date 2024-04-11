@@ -1,26 +1,21 @@
-// store/i18nStore.js
+// store/langStore.js
 
 import { defineStore } from 'pinia';
-import { ref } from 'vue';
-import i18n from '../i18n'; 
+import { i18n } from 'vue-i18n'
 
-export const useI18nStore = defineStore('i18n', () => {
-  const locale = ref(i18n.locale); // 初始语言设置
-
-  // 更改语言的方法
-  function setLocale(newLocale) {
-    if (i18n.availableLocales.includes(newLocale)) {
-      locale.value = newLocale;
-      i18n.locale = newLocale; // 更新VueI18n的语言设置
-    } else {
-      console.error(`The locale ${newLocale} is not supported.`);
-    }
+export const useLangStore = defineStore('lang', {
+  state: () => ({
+      locale: localStorage.getItem('language')
+  }),
+  actions: {
+      setLang(newLang) {
+          localStorage.setItem('language', newLang)
+          this.locale = newLang
+          i18n.global.locale.value = newLang
+          location.reload()
+      }
   }
+})
 
-  // 获取当前语言的方法
-  function getCurrentLocale() {
-    return locale.value;
-  }
 
-  return { locale, setLocale, getCurrentLocale };
-});
+ 
