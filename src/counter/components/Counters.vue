@@ -11,6 +11,4 @@ export default {
     </div>
 </template>
 
-<style scoped lang="less">
-666
-</style>
+<style scoped lang="less"></style>
