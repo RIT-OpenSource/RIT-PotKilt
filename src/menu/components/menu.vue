@@ -18,7 +18,7 @@
     }">
         <a-row :gutter="20" :style="{ marginBottom: '20px' }">
             <a-col :span="8">
-                <a-card :title="$t('Counter')" style="width: 100%">
+                <a-card :title="$t('Counter')" style="width: 100%" @click="goToCounterPage">
                    {{  $t("Open counter Page") }}
                 </a-card>
             </a-col>
