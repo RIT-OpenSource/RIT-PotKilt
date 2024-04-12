@@ -1,7 +1,7 @@
 <script>
 import PageHeader from "@/public/components/PageHeader.vue";
+import Counter from "./components/Counters.vue";
 import PageBottom from "@/public/components/PageBottom.vue";
-import Counter from "./components/Counter.vue";
 
 export default {
     name: "App",
@@ -44,4 +44,3 @@ export default {
     text-align: center;
 }
 </style>
-

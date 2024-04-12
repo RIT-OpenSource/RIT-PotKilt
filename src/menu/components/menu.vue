@@ -4,6 +4,9 @@
         methods: {
             goToSettingPage() {
                 location.href = '/setting.html';
+            },
+            goToCounterPage() {
+                location.href = '/counter.html';
             }
         }
     };

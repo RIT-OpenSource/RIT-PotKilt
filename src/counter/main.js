@@ -1,5 +1,5 @@
 import { createApp } from "vue";
-import app from "./app.vue";
+import App from "./App.vue";
 import { createPinia } from "pinia";
 import { createI18n } from 'vue-i18n';
 
@@ -27,7 +27,6 @@ const i18n = createI18n({
 const app = createApp(App);
 
 const pinia = createPinia()
-
 app.use(pinia);
 
 app.use(i18n);
